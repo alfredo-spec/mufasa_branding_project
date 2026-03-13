@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mufasa — Brand Project Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0A0A;
+  --surface: #111110;
+  --surface-2: #1A1918;
+  --border: #1E1C1A;
+  --text: #F5EDD8;
+  --muted: #8A8278;
+  --amber: #C27D2C;
+  --amber-soft: rgba(194,125,44,0.08);
+  --green: #4A9E6A;
+  --green-soft: rgba(74,158,106,0.08);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  padding: 80px 0 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.header-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.header-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 16px;
+}
+.header-title span {
+  font-style: italic;
+  background: linear-gradient(135deg, #C27D2C, #E8631A, #D4982E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.card-grid--single {
+  grid-template-columns: 1fr;
+}
+
+/* Link cards */
+.card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.card:hover {
+  border-color: var(--amber);
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
+.card--featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(194,125,44,0.06), rgba(232,99,26,0.03));
+  border-color: rgba(194,125,44,0.2);
+}
+.card--featured:hover {
+  border-color: var(--amber);
+}
+.card-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.card-icon--amber { background: var(--amber-soft); color: var(--amber); }
+.card-icon--green { background: var(--green-soft); color: var(--green); }
+.card-icon--muted { background: rgba(138,130,120,0.1); color: var(--muted); }
+.card-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.card-badge {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.badge-html { background: rgba(232,99,26,0.12); color: #E8631A; }
+.badge-md { background: rgba(120,120,220,0.12); color: #8080DC; }
+.badge-css { background: rgba(74,158,106,0.12); color: #4A9E6A; }
+.card-arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+.card:hover .card-arrow {
+  transform: translateX(4px);
+  color: var(--amber);
+}
+.card-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Footer */
+.footer {
+  padding: 48px 0;
+  text-align: center;
+}
+.footer-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.footer-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .header { padding: 48px 0 32px; }
+  .section { padding: 32px 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <p class="header-eyebrow">Brand Project Hub &middot; March 2026</p>
+    <h1 class="header-title">Mufasa<span>.</span></h1>
+    <p class="header-sub">Visual identity &amp; brand strategy for the B2B safari operating system.</p>
+  </header>
+
+  <!-- UI Concepts -->
+  <section class="section">
+    <p class="section-label">UI Concepts &amp; Moodboards</p>
+    <div class="card-grid card-grid--single">
+      <a href="ui-concepts/moodboard-presentation.html" class="card card--featured">
+        <div class="card-icon card-icon--amber">&#9670;</div>
+        <div class="card-title">
+          Sixteen Directions &mdash; Visual Identity Moodboard
+          <span class="card-badge badge-html">HTML</span>
+        </div>
+        <div class="card-desc">Interactive moodboard with 16 brand directions. Includes colour palettes, typography systems, UI previews, voice samples, pricing tables, and agent dashboard mockups. Scroll through or use the nav pills to jump between directions.</div>
+        <div class="card-meta">moodboard-presentation.html &middot; 3,100+ lines &middot; self-contained</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Brand Strategy -->
+  <section class="section">
+    <p class="section-label">Brand Strategy</p>
+    <div class="card-grid">
+      <a href="brand-strategy/positioning.md" class="card">
+        <div class="card-icon card-icon--green">&#9632;</div>
+        <div class="card-title">
+          Brand Positioning
+          <span class="card-badge badge-md">MD</span>
+        </div>
+        <div class="card-desc">Positioning statement, brand archetype (Magician + Hero), pillars, and competitive framing.</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+      <a href="brand-strategy/voice-and-tone.md" class="card">
+        <div class="card-icon card-icon--green">&#9632;</div>
+        <div class="card-title">
+          Voice &amp; Tone
+          <span class="card-badge badge-md">MD</span>
+        </div>
+        <div class="card-desc">Tone of voice guidelines, writing examples, do&rsquo;s and don&rsquo;ts for brand communications.</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Visual Identity -->
+  <section class="section">
+    <p class="section-label">Visual Identity</p>
+    <div class="card-grid">
+      <a href="visual-identity/moodboards-and-direction.md" class="card">
+        <div class="card-icon card-icon--amber">&#9670;</div>
+        <div class="card-title">
+          Moodboards &amp; Direction
+          <span class="card-badge badge-md">MD</span>
+        </div>
+        <div class="card-desc">Written rationale and decision log for visual identity explorations.</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+      <a href="visual-identity/mufasa-style-guide.css" class="card">
+        <div class="card-icon card-icon--muted">&#9632;</div>
+        <div class="card-title">
+          Style Guide (CSS Tokens)
+          <span class="card-badge badge-css">CSS</span>
+        </div>
+        <div class="card-desc">Master design system with CSS custom properties for colours, typography, spacing, and shadows.</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Project Docs -->
+  <section class="section">
+    <p class="section-label">Project Documentation</p>
+    <div class="card-grid">
+      <a href="README.md" class="card">
+        <div class="card-icon card-icon--muted">&#9679;</div>
+        <div class="card-title">
+          README
+          <span class="card-badge badge-md">MD</span>
+        </div>
+        <div class="card-desc">Project overview, structure, and setup instructions.</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+      <a href="BRANDING_PROCESS.md" class="card">
+        <div class="card-icon card-icon--muted">&#9679;</div>
+        <div class="card-title">
+          Branding Process
+          <span class="card-badge badge-md">MD</span>
+        </div>
+        <div class="card-desc">Step-by-step process documentation for the brand development workflow.</div>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">Mufasa.</div>
+    <div class="footer-meta">Brand Project Hub &middot; March 2026</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
