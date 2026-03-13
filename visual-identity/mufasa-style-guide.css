@@ -1,0 +1,119 @@
+# Mufasa Visual Identity — CSS Design System
+
+/*
+  MUFASA DESIGN SYSTEM
+  Status: DRAFT — to be defined during visual identity sessions
+  
+  Instructions:
+  - Update these tokens as the brand is defined
+  - This file is the source of truth for all HTML mockups
+  - All UI concepts should import/copy these variables
+*/
+
+:root {
+
+  /* ─── BRAND COLORS ─────────────────────────────────
+     To be defined. Placeholder values below.
+     Consider: earthy African tones (terracotta, ochre, clay)
+     balanced with modern SaaS confidence (deep midnight, clean white)
+  ─────────────────────────────────────────────────── */
+  --color-brand-primary:     #TBD;   /* Main brand color */
+  --color-brand-secondary:   #TBD;   /* Secondary accent */
+  --color-brand-tertiary:    #TBD;   /* Optional third color */
+
+  /* ─── SURFACE COLORS ──────────────────────────────── */
+  --color-surface-base:      #TBD;   /* App background */
+  --color-surface-raised:    #TBD;   /* Cards / panels */
+  --color-surface-overlay:   #TBD;   /* Modals / dropdowns */
+
+  /* ─── TEXT COLORS ─────────────────────────────────── */
+  --color-text-primary:      #TBD;
+  --color-text-secondary:    #TBD;
+  --color-text-muted:        #TBD;
+  --color-text-inverse:      #TBD;   /* Text on dark/brand bg */
+
+  /* ─── BORDER ──────────────────────────────────────── */
+  --color-border-default:    #TBD;
+  --color-border-subtle:     #TBD;
+
+  /* ─── SEMANTIC ────────────────────────────────────── */
+  --color-semantic-success:  #TBD;
+  --color-semantic-warning:  #TBD;
+  --color-semantic-error:    #TBD;
+  --color-semantic-info:     #TBD;
+
+  /* ─── TYPOGRAPHY ───────────────────────────────────
+     To be defined. Consider:
+     Display: Clash Display, Playfair Display, or custom
+     Heading: Inter, Plus Jakarta Sans, or DM Sans
+     Body: Inter (most legible for data-dense UIs)
+     Mono: JetBrains Mono (for prices, codes, data)
+  ─────────────────────────────────────────────────── */
+  --font-display:    'TBD', sans-serif;
+  --font-heading:    'TBD', sans-serif;
+  --font-body:       'TBD', sans-serif;
+  --font-mono:       'TBD', monospace;
+
+  --font-size-display:  64px;
+  --font-size-h1:       48px;
+  --font-size-h2:       36px;
+  --font-size-h3:       28px;
+  --font-size-h4:       22px;
+  --font-size-body-lg:  18px;
+  --font-size-body:     16px;
+  --font-size-body-sm:  14px;
+  --font-size-caption:  12px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:    700;
+
+  --line-height-tight:   1.2;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ─── SPACING ─────────────────────────────────────── */
+  --spacing-1:  4px;
+  --spacing-2:  8px;
+  --spacing-3:  12px;
+  --spacing-4:  16px;
+  --spacing-5:  20px;
+  --spacing-6:  24px;
+  --spacing-8:  32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+
+  /* ─── BORDER RADIUS ───────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* ─── SHADOWS ─────────────────────────────────────── */
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:     0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg:     0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+  --shadow-xl:     0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04);
+  --shadow-brand:  TBD; /* Brand-colored glow — to be defined */
+
+  /* ─── TRANSITIONS ─────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* ─── Z-INDEX ─────────────────────────────────────── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-dropdown: 100;
+  --z-sticky:  200;
+  --z-overlay: 300;
+  --z-modal:   400;
+  --z-toast:   500;
+
+}
